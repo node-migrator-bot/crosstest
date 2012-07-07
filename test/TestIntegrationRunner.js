@@ -23,7 +23,7 @@ TestIt('TestIntegrationRunner', {
       function () {
         var integrationOutputPath = path.join(__dirname, 'Integration.out');
         
-        test.assert(path.existsSync(integrationOutputPath), 
+        test.assert(fs.existsSync(integrationOutputPath), 
           'Output file should be exists');
         var output = fs.readFileSync(integrationOutputPath, 'utf8');
         fs.unlinkSync(integrationOutputPath);

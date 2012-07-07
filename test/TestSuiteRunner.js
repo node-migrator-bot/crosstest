@@ -46,7 +46,7 @@ TestIt('TestSuiteRunner', {
                             'test second', 'after each'];
         
         var suiteOutputPath = path.join(__dirname, 'Suite1.out');
-        test.assert(path.existsSync(suiteOutputPath), 
+        test.assert(fs.existsSync(suiteOutputPath), 
           'Output file should be exists');
         var output = fs.readFileSync(suiteOutputPath, 'utf8');
         fs.unlinkSync(suiteOutputPath);
@@ -75,7 +75,7 @@ TestIt('TestSuiteRunner', {
       },
       function () {
         var suiteOutputPath = path.join(__dirname, 'Suite3.out');
-        test.assert(path.existsSync(suiteOutputPath), 
+        test.assert(fs.existsSync(suiteOutputPath), 
           'Output file should be exists');
         var output = fs.readFileSync(suiteOutputPath, 'utf8');
         fs.unlinkSync(suiteOutputPath);
@@ -113,7 +113,7 @@ TestIt('TestSuiteRunner', {
       },
       function () {
         var suiteOutputPath = path.join(__dirname, 'Suite4.out');
-        test.assert(path.existsSync(suiteOutputPath), 
+        test.assert(fs.existsSync(suiteOutputPath), 
           'Output file should be exists');
         var output = fs.readFileSync(suiteOutputPath, 'utf8');
         fs.unlinkSync(suiteOutputPath);

@@ -88,7 +88,7 @@ TestIt('TestCrossTest', {
       },
       function () {
         var suiteOutputPath = path.join(__dirname, 'Suite2.out');
-        test.assert(path.existsSync(suiteOutputPath), 
+        test.assert(fs.existsSync(suiteOutputPath), 
           'Output file should be exists');
         var output = fs.readFileSync(suiteOutputPath, 'utf8');
         fs.unlinkSync(suiteOutputPath);
@@ -128,7 +128,7 @@ TestIt('TestCrossTest', {
       function () {
         var integrationOutputPath = path.join(__dirname, 'Integration2.out');
         
-        test.assert(path.existsSync(integrationOutputPath), 
+        test.assert(fs.existsSync(integrationOutputPath), 
           'Output file should be exists');
         var output = fs.readFileSync(integrationOutputPath, 'utf8');
         fs.unlinkSync(integrationOutputPath);

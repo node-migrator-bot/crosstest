@@ -4,7 +4,7 @@ var fs = require('fs'),
 exports.appendFileSync = function (file, data) {
   
   var position = 0;
-  if (path.existsSync(file)) {
+  if (fs.existsSync(file)) {
     position = fs.statSync(file).size;
   }
   
